@@ -1,6 +1,6 @@
 #!/bin/sh
 for file in /etc/my_init.d/*; do 
-if [ ${foo:0:1} == "_" ]; then
+if [ ${file:0:1} == "_" ] || [ ${file:0:1} == "0" ]; then
   exec $file &
 else
   "$file" 
