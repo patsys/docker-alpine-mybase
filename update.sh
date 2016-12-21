@@ -1,4 +1,4 @@
-apk update && apk version |  wc -l | { read test; if [ "$test" -ge 1 ];  then  return 1; fi; }
+apk update && apk version |  wc -l | { read test; if [ "$test" -gt 1 ];  then  return 1; fi; }
 r=$?
 if [ r -eq 1 ]; then
   exit $r
