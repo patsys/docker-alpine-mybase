@@ -6,4 +6,5 @@ RUN chmod u+x /etc/update.sh
 RUN chmod ugo+x /etc/start
 RUN mkdir -p /etc/my_init.d
 RUN mkdir -p /etc/my_update
+RUN echo "#!/bin/sh" > /etc/my_updat/empty
 CMD ["/etc/start"]
