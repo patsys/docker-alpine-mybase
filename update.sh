@@ -1,7 +1,7 @@
-apk update && apk version |  wc -l | { read test; if [ "$test" -gt 1 ];  then  return 1; fi; }
-r=$?
-if [ r -eq 1 ]; then
-  exit $r
+apk update 
+test=`apk version |  wc -l` 
+if [ "$test" -gt 1 ];  then
+  exit 1
 fi
 for file in /etc/my_update/*; do "$file";
 te=$?
